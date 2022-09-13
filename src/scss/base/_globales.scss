@@ -1,0 +1,91 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: v.$spaceGrotesk;
+    @include m.tablet{
+        flex-direction: row;
+    }
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    width: 95%;
+    margin: 0 auto;
+    max-width: 35rem;
+    padding: 10rem 0 0 0;
+    @include m.tablet{
+        width: 40%;
+        max-width: 140rem;
+        margin-right: 12rem;
+
+    }
+}
+
+.button{
+    padding: 1.4rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    border: none;
+    color: v.$violetaClaro;
+    background-color: v.$violetaNegro;
+
+    &:hover{
+        cursor: pointer;
+        background-color: v.$violetaOscuro;
+        color: v.$violetaNegro;
+    }
+}
+
+.unshow{
+    display: none;
+}
+// Backgrounds
+    .bg{
+        background-image: url('../../images/bg-main-mobile.png');
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        height: 30vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        align-items: center;
+        padding: 2rem;
+        // padding-bottom: 20rem;
+        @include m.tablet{
+                background-image: url('../../images/bg-main-desktop.png');
+                background-position: center center;
+                background-size: cover;
+                max-width: 40vh;
+                height: 100vh;  
+                align-self: center; 
+                align-items: center;
+                justify-content: center;
+                // position: fixed;
+        }
+    }
+h1,h2,h3,p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}

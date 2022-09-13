@@ -1,0 +1,31 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.confirmed{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    font-weight: 400;
+    &.contenedor{
+        padding-top: 12rem;
+        @include m.tablet{
+            padding-top: 4rem;
+        }
+    }
+
+    img{
+        margin: 0 auto 4rem auto;
+        width: 8rem;
+    }
+    h2{
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+    p{
+        text-transform: none;
+        color: v.$violetaOscuro;
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+    }
+
+}
